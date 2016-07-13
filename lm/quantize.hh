@@ -93,7 +93,7 @@ class DontQuantize {
 };
 
 class SeparatelyQuantize {
-  private:
+  public:
     class Bins {
       public:
         // Sigh C++ default constructor
@@ -134,7 +134,6 @@ class SeparatelyQuantize {
         uint64_t mask_;
     };
 
-  public:
     static const ModelType kModelTypeAdd = kQuantAdd;
 
     static void UpdateConfigFromBinary(const BinaryFormat &file, uint64_t offset, Config &config);
